@@ -5,7 +5,7 @@ import { ListItem } from './interfaces/list-item';
 @Component({
   selector: 'to-do-list',
   templateUrl: './to-do-list.component.html',
-  styleUrls: ['./to-do-list.component.css']
+  styleUrls: ['./to-do-list.component.scss']
 })
 
 export class ToDoListComponent {

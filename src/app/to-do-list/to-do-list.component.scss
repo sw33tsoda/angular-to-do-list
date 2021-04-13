@@ -1,0 +1,74 @@
+.to-do-list {
+    border:2px solid crimson;
+    padding: 5px;
+    border-radius: 0.25em;
+    max-width: 500px;
+    margin:auto;
+    margin-top: 50px;
+    &__title {
+        font-size: 15pt;
+        text-transform: uppercase;
+        color: crimson;
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+        &__preview {
+            text-align: center;
+        }
+        
+        &__input {}
+        
+        &__button {
+            background: crimson;
+            border:none;
+            padding: 5px 0 5px;
+            border-radius: 0.25em;
+            color: white;
+            &:hover {
+                background: #ff355d;
+            }
+        }
+    }
+    &__listItems {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        row-gap: 2.5px;
+        
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            /* background: crimson; */
+            border:1px solid crimson;
+            border-radius: 0.25em;
+            padding: 0 2.5px 0 2.5px;
+            font-size: 0.85em;
+            &__index span {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+            &:hover {
+                background: crimson;
+                color: white;
+            }
+            &__item input {
+                border: none;
+                /* background:crimson; */
+                /* color:white; */
+            }
+        }
+    }
+}
+
+input {
+    border:none;
+    border-bottom: 1px solid crimson;
+}
+
+input:focus {
+    outline: none;
+}
