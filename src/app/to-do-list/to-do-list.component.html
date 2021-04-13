@@ -7,8 +7,9 @@
     </div>
     <div class="to-do-list__listItems">
         <div class="listItems__item" *ngFor="let item of list.items; let i = index;">
-            <p class="item__index">{{i + 1}} <span>Edit</span><span (click)="delete(i)">Delete</span></p>
-            <p class="item__desc">{{item.description}}</p>
+            <p class="item__index">{{i + 1}} <span (click)="handleToggleEditMode(i)">{{item.isEditMode ? 'Cancel editting' : 'Edit'}}</span><span (click)="delete(i)">Delete</span></p>
+            <p class="item__desc" *ngIf="!item.isEditMode">{{item.description}}</p>
+            <input *ngIf="item.isEditMode" [value]="item.description" (keydown)="handleUpdateItem($event,i)"/>
         </div>
     </div>
 </div>

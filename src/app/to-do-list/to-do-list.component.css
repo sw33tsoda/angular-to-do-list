@@ -60,7 +60,22 @@
     color: white;
 }
 
+.listItems__item input {
+    border: none;
+    /* background:crimson; */
+    /* color:white; */
+}
+
 .item__index span {
     margin-left: 5px;
     cursor: pointer;
+}
+
+input {
+    border:none;
+    border-bottom: 1px solid crimson;
+}
+
+input:focus {
+    outline: none;
 }

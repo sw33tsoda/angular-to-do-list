@@ -30,4 +30,15 @@ export class ToDoListComponent {
   delete(index:number) : void {
     this.list.items.splice(index,1);
   }
+
+  handleToggleEditMode(index:number) : void {
+    this.list.items[index].isEditMode = !this.list.items[index].isEditMode;
+  }
+
+  handleUpdateItem(event:any,index:number) : void {
+    if (event.which == 13) {
+      this.list.items[index].description = event.target.value;
+      this.list.items[index].isEditMode = false;
+    }
+  }
 }
