@@ -17,10 +17,6 @@ export class ToDoListComponent {
     }]
   }
 
-  constructor() {
-    console.log(this.list);
-  }
-
   add() : void {
     if (this.input) {
       this.list.items.push({
@@ -31,7 +27,7 @@ export class ToDoListComponent {
     }
   }
 
-  delete(item:string) {
-    this.list.items = this.list.items.filter(_item => _item.description !== item);
+  delete(index:number) : void {
+    this.list.items.splice(index,1);
   }
 }
