@@ -1,0 +1,14 @@
+<div class="to-do-list">
+    <h1 class="to-do-list__title">To Do List</h1>
+    <div class="to-do-list__form">
+        <p class="form__preview">{{input == '' ? 'Enter something...' : input}}</p>
+        <input class="form__input" type="text" [value]="input" (input)="input = $event.target.value" />
+        <button class="form__button" (click)="add()">Add</button>
+    </div>
+    <div class="to-do-list__listItems">
+        <div class="listItems__item" *ngFor="let item of list.items; let i = index;">
+            <p class="item__index">{{i + 1}} <span>Edit</span><span (click)="delete(item.description)">Delete</span></p>
+            <p class="item__desc">{{item.description}}</p>
+        </div>
+    </div>
+</div>
