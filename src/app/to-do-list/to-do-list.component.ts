@@ -12,7 +12,13 @@ export class ToDoListComponent {
   input:string = '';
   list:List<ListItem> = {
     items:[{
-      description:'HEllo',
+      description:'Wake up.',
+      isEditMode:false,
+    },{
+      description:'Brush teeth.',
+      isEditMode:false,
+    },{
+      description:'Make bed.',
       isEditMode:false,
     }]
   }
