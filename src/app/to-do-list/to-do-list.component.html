@@ -6,7 +6,7 @@
         <button class="to-do-list__form__button" (click)="add()">Add</button>
     </div>
     <div class="to-do-list__listItems">
-        <div class="to-do-list__listItems__item" *ngFor="let item of list.items; let i = index;">
+        <div class="to-do-list__listItems__item" [class.to-do-list__listItems__item--editMode]="item.isEditMode" *ngFor="let item of list.items; let i = index;">
             <p class="to-do-list__listItems__item__index">{{i + 1}} <span (click)="handleToggleEditMode(i)">{{item.isEditMode ? 'Cancel editting' : 'Edit'}}</span><span (click)="delete(i)">Delete</span></p>
             <p class="to-do-list__listItems__item__desc" *ngIf="!item.isEditMode">{{item.description}}</p>
             <input *ngIf="item.isEditMode" [value]="item.description" (keydown)="handleUpdateItem($event,i)"/>

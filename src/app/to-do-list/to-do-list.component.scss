@@ -20,7 +20,7 @@
             text-align: center;
         }
         
-        &__input {}
+        // &__input {}
         
         &__button {
             background: crimson;
@@ -55,10 +55,17 @@
                 background: crimson;
                 color: white;
             }
-            &__item input {
-                border: none;
+            > input {
+                border-bottom: none !important;
                 /* background:crimson; */
                 /* color:white; */
+                text-indent: 2.5px;
+                border-radius: 0.25em;
+            }
+
+            &--editMode {
+                background: crimson;
+                color: white;
             }
         }
     }
